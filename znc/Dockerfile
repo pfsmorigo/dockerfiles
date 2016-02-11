@@ -10,7 +10,7 @@ RUN apt-get update \
   && ./configure --with-openssl \
   && make \
   && make install \
-  && useradd -m -s /bin/bash -d /var/lib/znc znc -u 500 \
+  && useradd -m -s /bin/bash -d /var/lib/znc znc \
   && apt-get -y remove build-essential wget \
   && apt-get -y autoremove \
   && rm -rf /var/lib/apt/lists/* /usr/local/src/*
