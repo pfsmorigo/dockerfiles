@@ -10,7 +10,7 @@ RUN apt-get update \
   && make \
   && make install \
   && useradd -m -s /bin/bash -d /var/lib/znc znc -u 500 \
-  && apt-get -y remove build-essential \
+  && apt-get -y remove build-essential wget \
   && apt-get -y autoremove \
   && rm -rf /var/lib/apt/lists/* /usr/local/src/*
 
